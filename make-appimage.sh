@@ -12,7 +12,7 @@ export ICON=/usr/share/pixmaps/localsend.png
 export DESKTOP=/usr/share/applications/localsend.desktop
 
 # Deploy dependencies
-quick-sharun /usr/bin/localsend
+quick-sharun /usr/bin/localsend /usr/lib/localsend
 
 # Additional changes can be done in between here
 
