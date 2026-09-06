@@ -3,14 +3,10 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q localsend | awk '{print $2; exit}') # example command to get version of application here
-export ARCH VERSION
+export ARCH
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/usr/share/icons/hicolor/512x512/apps/localsend.png
-export DESKTOP=/usr/share/applications/localsend.desktop
-export STARTUPWMCLASS=org.localsend.localsend_app
 export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
 # Deploy dependencies
